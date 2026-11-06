@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吴旭涵 · 影像档案 | 影视后期 · 内容创作</title>
+<meta name="description" content="吴旭涵的影像档案：影视动画科班出身，影视后期、短视频运营与 AIGC 创作。以艺术展陈的方式，呈现十六件影像作品。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLACK BOX ARCHIVE · 影像档案">
+<meta property="og:title" content="吴旭涵 · 影像档案 | 影视后期 · 内容创作">
+<meta property="og:description" content="十六件影像作品，以艺术展陈的方式呈现：商业广告、海外短剧、纪录片与 AIGC 创作。">
+<meta property="og:url" content="http://127.0.0.1:8377/">
+<meta property="og:image" content="http://127.0.0.1:8377/assets/og/cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="吴旭涵 · 影像档案 | 影视后期 · 内容创作">
+<meta name="twitter:description" content="十六件影像作品，以艺术展陈的方式呈现：商业广告、海外短剧、纪录片与 AIGC 创作。">
+<meta name="twitter:image" content="http://127.0.0.1:8377/assets/og/cover.jpg">
+<link rel="canonical" href="http://127.0.0.1:8377/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "吴旭涵",
+  "alternateName": "Wu Xuhan",
+  "jobTitle": "影视后期 · 短视频运营 · AIGC 创作",
+  "description": "影视动画专业在读，专注影视后期、短视频运营与 AIGC 内容创作，作品覆盖商业广告、海外短剧、纪录片与城市影像。",
+  "url": "http://127.0.0.1:8377/",
+  "image": "http://127.0.0.1:8377/assets/og/cover.jpg",
+  "knowsLanguage": [
+    "zh-CN",
+    "en",
+    "ko",
+    "ja"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "吉林工程技术师范学院"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "WeChat",
+    "description": "WeChat: W77495172"
+  },
+  "knowsAbout": [
+    "Video Editing",
+    "Post-production",
+    "Premiere Pro",
+    "After Effects",
+    "DaVinci Resolve",
+    "Short-form Video",
+    "AIGC"
+  ],
+  "award": [
+    "吉林省第七届冰雪节创意大赛 · 三等奖（省级）",
+    "天池奖第七届吉林省大学生广告创意大赛 · 优秀奖（省级）",
+    "吉林省第三、二届大学生主题创作短视频大赛 · 优秀奖（省级）",
+    "第六届全国大学生组织管理能力大赛 · 一等奖（国家级）",
+    "全国大学生视觉艺术设计竞赛（UVADC）省级赛 · 三等奖"
+  ]
+}
+</script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23b83c26'/%3E%3Ctext x='50' y='72' font-size='60' text-anchor='middle' fill='%23f2ece0' font-family='serif'%3E吴%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="css/art.css">
+<link rel="stylesheet" href="css/ref-2026.css">
+<link rel="stylesheet" href="css/intro-3d.css">
+<link rel="stylesheet" href="css/cursor-glow.css">
+<link rel="preload" as="image" href="assets/hero/hero-archive.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero/intro-frame-1.jpg">
+<link rel="preload" as="image" href="assets/hero/intro-frame-2.jpg">
+<link rel="preload" as="image" href="assets/hero/intro-frame-3.jpg">
+<noscript><style>.preloader,.intro{display:none!important}.cursor{display:none!important}html{overflow:auto!important}</style></noscript>
+</head>
+<body class="is-loading">
+<!-- ================= 3D OPENING · 档案开场 ================= -->
+<div class="intro" id="intro3d" role="dialog" aria-modal="true" aria-label="影像档案 · 开场">
+  <canvas class="intro-dust" id="introDust" aria-hidden="true"></canvas>
+  <div class="intro-scene" id="introScene">
+    <div class="intro-portal" aria-hidden="true"></div>
+    <div class="intro-rig" id="introRig">
+      <div class="intro-floor" aria-hidden="true"></div>
+      <div class="mono" id="introMono" aria-hidden="true">
+        <div class="mono-face mono-front">
+          <span class="mono-cn">影像档案</span>
+          </div>
+        <div class="mono-face mono-back"></div>
+        <div class="mono-face mono-side mono-side-l"></div>
+        <div class="mono-face mono-side mono-side-r"></div>
+        <div class="mono-face mono-cap mono-cap-t"></div>
+        <div class="mono-face mono-cap mono-cap-b"></div>
+        <span class="mono-glow" aria-hidden="true"></span>
+        <span class="mono-seam"></span>
+        <span class="mono-light"></span>
+      </div>
+      <figure class="intro-card ic1" aria-hidden="true"><img src="assets/hero/intro-frame-1.jpg" alt="" width="800" height="1000" decoding="async"><figcaption>NO.01 / 灯</figcaption></figure>
+      <figure class="intro-card ic2" aria-hidden="true"><img src="assets/hero/intro-frame-2.jpg" alt="" width="1200" height="800" decoding="async"><figcaption>NO.06 / 窥</figcaption></figure>
+      <figure class="intro-card ic3" aria-hidden="true"><img src="assets/hero/intro-frame-3.jpg" alt="" width="1200" height="800" decoding="async"><figcaption>NO.07 / 雾</figcaption></figure>
+      <figure class="intro-card ic4" aria-hidden="true"><img src="assets/hero/intro-frame-4.jpg" alt="" width="1200" height="800" decoding="async"><figcaption>NO.11 / 城</figcaption></figure>
+      <figure class="intro-card ic5" aria-hidden="true"><img src="assets/hero/intro-frame-5.jpg" alt="" width="1500" height="844" decoding="async"><figcaption>NO.12 / 光</figcaption></figure>
+    </div>
+  </div>
+  <div class="intro-ui">
+    <div class="intro-top">
+      <span class="intro-brand">Black Box Archive — 影像档案</span>
+      </div>
+    <p class="intro-hint"><i></i>拖动旋转</p>
+    <div class="intro-bottom">
+      <button class="intro-enter" id="introEnter" type="button"><span>开启档案</span><i>&#8599;</i></button>
+      <button class="intro-skip" id="introSkip" type="button">跳过 SKIP</button>
+    </div>
+  </div>
+</div>
+
+<a class="skip-link" href="#works" data-i18n="aria.skip">跳到主内容</a>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+<!-- 入场遮幕 -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <p class="preloader-kicker" data-i18n="preloader.kicker">BLACK BOX ARCHIVE — 影像档案</p>
+    <p class="preloader-count"><span id="loadNum">00</span><em>%</em></p>
+    <div class="preloader-track"><i id="loadBar"></i></div>
+    <p class="preloader-meta" data-i18n="preloader.meta">吴旭涵 · 影视后期 / 短视频运营 · 2026</p>
+  </div>
+  <span class="preloader-corner preloader-corner--tl"></span>
+  <span class="preloader-corner preloader-corner--tr"></span>
+  <span class="preloader-corner preloader-corner--bl"></span>
+  <span class="preloader-corner preloader-corner--br"></span>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <span class="cursor-dot"></span>
+  <span class="cursor-ring"></span>
+  <span class="cursor-label" id="cursorLabel"></span>
+</div>
+
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- 顶部导航 -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" data-cursor="TOP" aria-label="回到顶部" data-i18n-aria="aria.backTop">
+    <span class="brand-seal" aria-hidden="true">吴</span>
+    <span class="brand-name"><b>吴旭涵</b><em>WU XUHAN</em></span>
+  </a>
+  <nav class="nav" id="mainNav" aria-label="主导航" data-i18n-aria="aria.nav">
+    <a class="nav-link" href="#works"><i>01</i><span data-i18n="nav.works">展映</span></a>
+    <a class="nav-link" href="#collection"><i>02</i><span data-i18n="nav.collection">合集</span></a>
+    <a class="nav-link" href="#about"><i>03</i><span data-i18n="nav.about">自述</span></a>
+    <a class="nav-link" href="#experience"><i>04</i><span data-i18n="nav.exp">履历</span></a>
+    <a class="nav-link" href="#contact"><i>05</i><span data-i18n="nav.contact">联络</span></a>
+    <div class="lang-switch lang-switch--mobile" role="group" aria-label="切换语言" data-i18n-aria="aria.lang">
+      <button type="button" data-lang-btn="zh" class="is-active" aria-pressed="true">中</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="ko" aria-pressed="false">한</button>
+      <button type="button" data-lang-btn="ja" aria-pressed="false">日</button>
+    </div>
+  </nav>
+  <div class="header-tools">
+    <div class="lang-switch" id="langSwitch" role="group" aria-label="切换语言" data-i18n-aria="aria.lang">
+      <button type="button" data-lang-btn="zh" class="is-active" aria-pressed="true">中</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang-btn="ko" aria-pressed="false">한</button>
+      <button type="button" data-lang-btn="ja" aria-pressed="false">日</button>
+    </div>
+    <button class="util-link" type="button" data-copy="wuxuhan3@gmail.com" data-cursor="复制" data-i18n-cursor="contact.copy">EMAIL</button>
+    <button class="util-link" type="button" data-copy="W77495172" data-cursor="复制" data-i18n-cursor="contact.copy">WECHAT</button>
+    <span class="clock" id="clock" aria-label="北京时间">--:--:--</span>
+    <a class="cv-link" href="assets/resume/%E5%90%B4%E6%97%AD%E6%B6%B5_%E7%AE%80%E5%8E%86.pdf" download="吴旭涵_简历.pdf" data-cursor="PDF" data-magnetic><span data-i18n="nav.cv">简历</span> <i>↓</i></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" data-i18n-aria="nav.menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- 右侧章节索引 -->
+<nav class="section-nav" id="sectionNav" aria-label="章节索引" data-i18n-aria="aria.sectionNav">
+  <a href="#hero" data-target="hero"><b>00</b><i></i><span data-i18n="section.hero">序</span></a>
+  <a href="#works" data-target="works"><b>01</b><i></i><span data-i18n="section.works">展映</span></a>
+  <a href="#collection" data-target="collection"><b>02</b><i></i><span data-i18n="section.collection">合集</span></a>
+  <a href="#about" data-target="about"><b>03</b><i></i><span data-i18n="section.about">自述</span></a>
+  <a href="#experience" data-target="experience"><b>04</b><i></i><span data-i18n="section.experience">履历</span></a>
+  <a href="#contact" data-target="contact"><b>05</b><i></i><span data-i18n="section.contact">联络</span></a>
+</nav>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero" data-theme="dark" data-section data-page="01">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-still"><img src="assets/hero/hero-archive.jpg" alt="" loading="eager" decoding="async" fetchpriority="high"></div>
+      <div class="hero-gridlines"></div>
+      <div class="hero-spot" id="heroSpot"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-scan"></div>
+      <div class="hero-planes">
+        <span class="plane p1"></span><span class="plane p2"></span><span class="plane p3"></span><span class="orb"></span>
+      </div>
+      <span class="hero-vertical hero-vertical--l">MOVING IMAGE · NARRATIVE · CRAFT</span>
+      <div class="hero-hud"><span class="hud-dot"></span><span>SYS.ARCHIVE</span><span>RGB // 4K</span><span>24 FPS</span></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-grid">
+
+        <!-- 左栏：身份（Brittany 式） -->
+        <div class="hero-idcol">
+          <h1 class="hero-name-xl" data-reveal>
+            <span data-i18n="hero.name">吴旭涵</span>
+            <em data-i18n="hero.nameEn">Wu Xuhan</em>
+          </h1>
+          <p class="hero-role" data-reveal data-i18n="hero.top2">影视后期 · 短视频运营 · AIGC</p>
+          <p class="hero-intro" data-reveal data-i18n-html="hero.lede">影视动画科班出身，在商业广告、海外短剧与纪录片之间，用剪辑重建时间的呼吸。</p>
+
+          <nav class="hero-nav2" aria-label="Section index" data-reveal>
+            <a href="#works"><b>01</b><span data-i18n="section.works">展映</span></a>
+            <a href="#collection"><b>02</b><span data-i18n="section.collection">合集</span></a>
+            <a href="#experience"><b>03</b><span data-i18n="section.experience">履历</span></a>
+            <a href="#contact"><b>04</b><span data-i18n="section.contact">联络</span></a>
+          </nav>
+
+          <div class="hero-social" data-reveal>
+            <button type="button" data-copy="W77495172" data-cursor="复制" data-i18n-cursor="contact.copy">
+              <i data-i18n="contact.wechat">微信</i><span>W77495172</span>
+            </button>
+            <button type="button" data-copy="wuxuhan3@gmail.com" data-cursor="复制" data-i18n-cursor="contact.copy">
+              <i>EMAIL</i><span>wuxuhan3@gmail.com</span>
+            </button>
+            <button type="button" data-copy="239509634" data-cursor="复制" data-i18n-cursor="contact.copy">
+              <i>QQ</i><span>239509634</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 右栏：品牌主张 + 数据 + 行动 -->
+        <div class="hero-brcol">
+          <h2 class="hero-brand" id="heroTitle">
+            <span class="title-line"><span class="title-inner" data-i18n-text="hero.title1" data-text="影像">影像</span></span>
+            <span class="title-line title-line--2"><span class="title-inner" data-i18n-text="hero.title2" data-text="造境">造境</span><span class="title-mark">。</span></span>
+          </h2>
+          <dl class="hero-stats2" id="heroStats">
+            <div class="stat"><dt><span data-count="4">4</span><em data-i18n="hero.unit1">段</em></dt><dd data-i18n="hero.stat1">内容实习</dd></div>
+            <div class="stat"><dt><span data-count="5">5</span><em data-i18n="hero.unit2">项</em></dt><dd data-i18n="hero.stat2">省级 / 国家级奖项</dd></div>
+            <div class="stat"><dt><span class="stat-prefix">TOP</span><span data-count="1">1</span></dt><dd data-i18n="hero.stat3">海外短剧日榜</dd></div>
+            <div class="stat"><dt><span data-count="8000">8000</span><em data-i18n="hero.unit4">+</em></dt><dd data-i18n="hero.stat4">账号冷启动涨粉</dd></div>
+          </dl>
+
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn-fill" href="#works" data-magnetic data-cursor="进入" data-i18n-cursor="hero.cursorEnter"><span data-i18n="hero.ctaWorks">进入展映</span> <i>&#8599;</i></a>
+            <a class="btn btn-line" href="assets/resume/%E5%90%B4%E6%97%AD%E6%B6%B5_%E7%AE%80%E5%8E%86.pdf" download="吴旭涵_简历.pdf" data-magnetic data-cursor="PDF"><span data-i18n="hero.ctaCv">下载简历</span> <i>&#8595;</i></a>
+          </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="marquee marquee--hero" data-marquee aria-hidden="true">
+      <div class="marquee-track">
+        <span data-i18n="marquee.m1">商业广告</span><i>✦</i><span data-i18n="marquee.m2">海外短剧</span><i>✦</i><span data-i18n="marquee.m3">纪录片</span><i>✦</i><span data-i18n="marquee.m4">AIGC 创作</span><i>✦</i><span data-i18n="marquee.m5">城市影像</span><i>✦</i><span data-i18n="marquee.m6">直播切片</span><i>✦</i><span data-i18n="marquee.m7">内容策略</span><i>✦</i><span data-i18n="marquee.m8">数据复盘</span><i>✦</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKS ================= -->
+  <section class="works" id="works" data-theme="light" data-section data-page="02">
+    <div class="section-inner">
+      <header class="section-head">
+        <h2 class="section-title" data-reveal>
+          <span class="cn" data-i18n="works.title">展映</span>
+          <span class="en" data-i18n="works.en">selected works</span>
+        </h2>
+        <div class="section-intro" data-reveal>
+          <p class="section-lede" data-i18n="works.lede">十六件影像作品，按主题陈列。悬停卡片可静音预览，点击进入完整展映。</p>
+          </div>
+      </header>
+
+      <div class="works-toolbar" data-reveal>
+        <div class="filters" id="filterBar" role="group" aria-label="作品分类" data-i18n-aria="aria.filters">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true"><span data-i18n="filters.all">全部</span><span class="f-count">16</span></button>
+          <button class="filter-btn" type="button" data-filter="ad" aria-pressed="false"><span data-i18n="filters.ad">商业广告</span><span class="f-count">5</span></button>
+          <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false"><span data-i18n="filters.ai">AI 创作</span><span class="f-count">2</span></button>
+          <button class="filter-btn" type="button" data-filter="drama" aria-pressed="false"><span data-i18n="filters.drama">短剧 · 预告</span><span class="f-count">6</span></button>
+          <button class="filter-btn" type="button" data-filter="doc" aria-pressed="false"><span data-i18n="filters.doc">纪录片</span><span class="f-count">1</span></button>
+          <button class="filter-btn" type="button" data-filter="city" aria-pressed="false"><span data-i18n="filters.city">城市 · 活动</span><span class="f-count">2</span></button>
+        </div>
+        <div class="view-toggle" id="viewToggle" role="group" aria-label="视图切换" data-i18n-aria="aria.view">
+          <button class="view-btn is-active" type="button" data-view="wall" aria-pressed="true"><span data-i18n="view.wall">展墙</span></button>
+          <button class="view-btn" type="button" data-view="index" aria-pressed="false"><span data-i18n="view.index">索引</span></button>
+        </div>
+      </div>
+
+      <div class="works-wall" id="worksWall" aria-live="polite"></div>
+      <div class="works-index" id="worksIndex" hidden></div>
+
+      <div class="works-foot">
+        <p class="works-total"><span data-i18n="works.before">共</span> <b id="worksTotal">16</b> <span data-i18n="works.after">件 · 影像母带可按需索取</span></p>
+        <a class="text-link" href="#contact" data-cursor="联络" data-i18n-cursor="nav.contact"><span data-i18n="works.request">索取完整片源</span> <i>→</i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIDEO LIBRARY ================= -->
+  <section class="collection" id="collection" data-theme="dark" data-section data-page="03">
+    <div class="section-inner">
+      <header class="section-head">
+        <h2 class="section-title" data-reveal>
+          <span class="cn" data-i18n="col.title">视频合集</span>
+          <span class="en" data-i18n="col.en">video library</span>
+        </h2>
+        <div class="section-intro" data-reveal>
+          <p class="section-lede" data-i18n="col.lede">全部成片按类目归档：商业广告、AI 创作、短剧与预告、纪录片、城市与活动。点击任意一条即可单独播放，展开或收起按类目查看。</p>
+          </div>
+      </header>
+
+      <div class="col-bar" data-reveal>
+        <p class="col-stat">
+          <b id="colCount">16</b><span data-i18n="col.unit">支视频</span>
+          <em>·</em>
+          <b id="colGroupCount">5</b><span data-i18n="col.groupUnit">个类目</span>
+        </p>
+        <button class="col-all" id="colToggleAll" type="button" aria-expanded="false" aria-controls="colGroups">
+          <span data-i18n="col.expandAll">展开全部</span><i aria-hidden="true">＋</i>
+        </button>
+      </div>
+
+      <div class="col-groups" id="colGroups" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about" data-theme="light" data-section data-page="04">
+    <div class="section-inner">
+      <div class="about-grid">
+        <aside class="about-aside">
+          <h2 class="section-title" data-reveal>
+            <span class="cn" data-i18n="about.title">自述</span>
+            <span class="en" data-i18n="about.en">about</span>
+          </h2>
+          <div class="seal" aria-hidden="true" data-tilt>
+            <span>吴</span><span>旭</span><span>涵</span><span>印</span>
+          </div>
+          <dl class="about-meta" data-reveal>
+            <div><dt data-i18n="about.edu">教育</dt><dd data-i18n="about.eduValue">吉林工程技术师范学院 · 艺术与设计学院 · 影视动画（本科）</dd></div>
+            <div><dt data-i18n="about.time">时间</dt><dd data-i18n="about.timeValue">2023.09 — 2027.07</dd></div>
+            <div><dt data-i18n="about.rank">排名</dt><dd data-i18n="about.rankValue">校前 10% · 一等奖学金 ×2</dd></div>
+            <div><dt data-i18n="about.loc">坐标</dt><dd data-i18n="about.locValue">吉林 · 中国</dd></div>
+          </dl>
+        </aside>
+
+        <div class="about-main">
+          <blockquote class="about-quote" data-reveal>
+            <p data-i18n-html="about.quote">把每一个 3 秒，<br>剪成能被记住的情绪。</p>
+          </blockquote>
+
+          <div class="about-copy" data-reveal>
+            <p data-i18n-html="about.p1">我是一名兼具<strong>后期制作</strong>与<strong>新媒体运营</strong>能力的复合型内容人。</p>
+            <p data-i18n-html="about.p2">熟练使用 Premiere Pro、After Effects、DaVinci Resolve、剪映专业版完成剪辑与包装。</p>
+          </div>
+
+          <div class="toolbox" data-reveal-group>
+            <p class="toolbox-label" data-reveal data-i18n="about.toolbox">TOOLBOX / 工具箱</p>
+            <ul class="toolbox-list" id="toolboxList">
+              <li data-reveal><span>Premiere Pro</span><em data-i18n="about.s1">剪辑</em></li>
+              <li data-reveal><span>After Effects</span><em data-i18n="about.s2">动效包装</em></li>
+              <li data-reveal><span>DaVinci Resolve</span><em data-i18n="about.s3">调色</em></li>
+              <li data-reveal><span>剪映专业版</span><em data-i18n="about.s4">快剪</em></li>
+              <li data-reveal><span>Photoshop</span><em data-i18n="about.s5">视觉设计</em></li>
+              <li data-reveal><span>Illustrator</span><em data-i18n="about.s6">图形</em></li>
+              <li data-reveal><span>Canva</span><em data-i18n="about.s7">快设</em></li>
+              <li data-reveal><span data-i18n="about.t8">短视频策划</span><em data-i18n="about.s8b">选题 / 脚本</em></li>
+              <li data-reveal><span data-i18n="about.t9">数据分析</span><em data-i18n="about.s9b">完播 / 互动</em></li>
+              <li data-reveal><span data-i18n="about.t10">AI 内容生产</span><em>AIGC</em></li>
+            </ul>
+          </div>
+
+          <div class="about-cards" data-reveal-group>
+            <article class="info-card" data-reveal data-tilt>
+              <p class="info-card-label" data-i18n="about.eduLabel">EDUCATION / 教育背景</p>
+              <h3 data-i18n="about.eduName">吉林工程技术师范学院</h3>
+              <p class="info-card-sub" data-i18n="about.eduSub">影视动画（本科） · 2023.09 — 2027.07 · 统招全日制</p>
+              <ul class="info-list">
+                <li data-i18n="about.eduLi1">主修：影视剪辑 / 三维动画建模 / 影视美术 / 动画软件制作 / 影视动画语言</li>
+                <li data-i18n="about.eduLi2">综合排名校前 10%，一等奖学金 ×2、二等奖学金 ×1、三等奖学金 ×2</li>
+              </ul>
+            </article>
+            <article class="info-card" data-reveal data-tilt>
+              <p class="info-card-label" data-i18n="about.awardsLabel">AWARDS / 获奖</p>
+              <ul class="award-list">
+                <li><span class="award-year">2026.12</span><span data-i18n="about.award1">吉林省第七届冰雪节创意大赛 · 三等奖（省级）</span></li>
+                <li><span class="award-year">2026.08</span><span data-i18n="about.award2">天池奖·第七届吉林省大学生广告创意大赛 · 优秀奖（省级）</span></li>
+                <li><span class="award-year">2025.07</span><span data-i18n="about.award3">吉林省第三、二届大学生主题创作短视频大赛 · 优秀奖（省级）</span></li>
+                <li><span class="award-year">2025.06</span><span data-i18n="about.award4">第六届全国大学生组织管理能力大赛 · 一等奖（国家级）</span></li>
+                <li><span class="award-year">2024.12</span><span data-i18n="about.award5">全国大学生视觉艺术设计竞赛（UVADC）省级赛 · 三等奖</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="experience" id="experience" data-theme="dark" data-section data-page="05">
+    <div class="section-inner">
+      <header class="section-head">
+        <h2 class="section-title" data-reveal>
+          <span class="cn" data-i18n="exp.title">履历</span>
+          <span class="en" data-i18n="exp.en">experience</span>
+        </h2>
+        <div class="section-intro" data-reveal>
+          <p class="section-lede" data-i18n="exp.lede">四段内容实战：从直播切片到海外短剧，再到汽车垂类与 AIGC。点击任一履历，展开它的方法与数据。</p>
+          </div>
+      </header>
+
+      <ol class="exp-list" id="expList">
+        <li class="exp-item is-open">
+          <button class="exp-row" type="button" aria-expanded="true">
+            <span class="exp-year" data-i18n="exp.y1">2025.12 — 2026.03</span>
+            <span class="exp-org" data-i18n="exp.o1">上海策良信息技术有限公司</span>
+            <span class="exp-role" data-i18n="exp.r1">新媒体运营实习生 · 汽车垂类</span>
+            <span class="exp-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="exp-panel"><div class="exp-panel-inner"><ul>
+            <li data-i18n="exp.b11">负责汽车改装垂类抖音矩阵号的内容策划、脚本撰写与日常运营。</li>
+            <li data-i18n="exp.b12">独立完成短视频从选题、脚本、剪辑到发布全流程。</li>
+            <li data-i18n="exp.b13">基于完播率、互动率、涨粉趋势迭代内容方向。</li>
+          </ul></div></div>
+        </li>
+        <li class="exp-item">
+          <button class="exp-row" type="button" aria-expanded="false">
+            <span class="exp-year" data-i18n="exp.y2">2025.07 — 2025.11</span>
+            <span class="exp-org" data-i18n="exp.o2">TSAF 深圳敏思悦动科技有限公司</span>
+            <span class="exp-role" data-i18n="exp.r2">新媒体运营实习生</span>
+            <span class="exp-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="exp-panel"><div class="exp-panel-inner"><ul>
+            <li data-i18n="exp.b21">独立运营小红书企业号，累计产出原创图文 88 篇、短视频 130 条，粉丝 0 → 8000+。</li>
+            <li data-i18n="exp.b22">搭建标准化选题库与更新 SOP，沉淀封面与标题模板。</li>
+            <li data-i18n="exp.b23">负责电商产品图后期，用 Photoshop 统一店铺视觉风格。</li>
+          </ul></div></div>
+        </li>
+        <li class="exp-item">
+          <button class="exp-row" type="button" aria-expanded="false">
+            <span class="exp-year" data-i18n="exp.y3">2024.11 — 2025.03</span>
+            <span class="exp-org" data-i18n="exp.o3">福州畅读科技有限公司</span>
+            <span class="exp-role" data-i18n="exp.r3">AI 漫剧后期制作实习生</span>
+            <span class="exp-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="exp-panel"><div class="exp-panel-inner"><ul>
+            <li data-i18n="exp.b31">独立完成 15 部都市复仇竖屏短剧后期剪辑，累计交付 1630 集。</li>
+            <li data-i18n="exp.b32">作品上线 MoboReels 等畅读海外短剧 App，单部最高登顶站内日榜第 1 名。</li>
+            <li data-i18n="exp.b33">基于海外榜单重构剪辑节奏，单集效率提升 36%。</li>
+          </ul></div></div>
+        </li>
+        <li class="exp-item">
+          <button class="exp-row" type="button" aria-expanded="false">
+            <span class="exp-year" data-i18n="exp.y4">2023.12 — 2024.03</span>
+            <span class="exp-org" data-i18n="exp.o4">莆田聚云合科技有限公司</span>
+            <span class="exp-role" data-i18n="exp.r4">视频剪辑实习生</span>
+            <span class="exp-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="exp-panel"><div class="exp-panel-inner"><ul>
+            <li data-i18n="exp.b41">负责直播切片与千川投流素材剪辑，日均产出 10–15 条。</li>
+            <li data-i18n="exp.b42">编写千川投放脚本，7 条成功跑量，素材完播率提升 35%。</li>
+          </ul></div></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact" data-theme="light" data-section data-page="06">
+    <div class="section-inner">
+      <h2 class="contact-title" data-reveal>
+        <span data-i18n="contact.title1">一起做点</span>
+        <span><span data-i18n="contact.title2">有质感的东西</span><em>。</em></span>
+      </h2>
+
+      <div class="contact-grid">
+        <div class="contact-lines" data-reveal>
+          <button class="copy-row" type="button" data-copy="W77495172" data-cursor="复制微信号" data-i18n-cursor="contact.copy">
+            <span class="copy-label" data-i18n="contact.wechat">微信</span>
+            <span class="copy-value">W77495172</span>
+            <span class="copy-icon" aria-hidden="true">⧉</span>
+          </button>
+          <button class="copy-row" type="button" data-copy="wuxuhan3@gmail.com" data-cursor="复制邮箱" data-i18n-cursor="contact.copy">
+            <span class="copy-label">EMAIL</span>
+            <span class="copy-value">wuxuhan3@gmail.com</span>
+            <span class="copy-icon" aria-hidden="true">⧉</span>
+          </button>
+          <button class="copy-row" type="button" data-copy="239509634" data-cursor="复制 QQ" data-i18n-cursor="contact.copy">
+            <span class="copy-label">QQ</span>
+            <span class="copy-value">239509634</span>
+            <span class="copy-icon" aria-hidden="true">⧉</span>
+          </button>
+          <button class="copy-row" type="button" data-copy="+8613599689022" data-cursor="复制手机号" data-i18n-cursor="contact.copy">
+            <span class="copy-label">PHONE</span>
+            <span class="copy-value">135 9968 9022</span>
+            <span class="copy-icon" aria-hidden="true">⧉</span>
+          </button>
+        </div>
+
+        <div class="contact-cta" data-reveal>
+          <div class="contact-btns">
+            <a class="btn btn-fill btn-lg" href="assets/resume/%E5%90%B4%E6%97%AD%E6%B6%B5_%E7%AE%80%E5%8E%86.pdf" download="吴旭涵_简历.pdf" data-magnetic data-cursor="PDF"><span data-i18n="contact.cvZh">中文简历 · PDF</span> <i>↓</i></a>
+            <a class="btn btn-line btn-lg" href="assets/resume/WuXuhan_Resume_EN.pdf" download="WuXuhan_Resume_EN.pdf" data-magnetic data-cursor="PDF"><span data-i18n="contact.cvEn">English CV</span> <i>↓</i></a>
+          </div>
+
+          <div class="resume-preview-row">
+            <button class="text-link" type="button" data-resume-preview="zh"><span data-i18n="contact.previewZh">在线预览中文简历</span> <i>↗</i></button>
+            <button class="text-link" type="button" data-resume-preview="en"><span data-i18n="contact.previewEn">在线预览英文简历</span> <i>↗</i></button>
+          </div>
+          <p class="dl-count" id="dlCount" hidden><span data-i18n="contact.dlCount">简历已被下载</span> <b id="dlNum">0</b> <span data-i18n="contact.dlUnit">次</span></p>
+          <p class="contact-time"><span id="clock2">--:--:--</span><span data-i18n="contact.time">BEIJING · 此刻</span></p>
+        </div>
+      </div>
+
+      <div class="guestbook" id="guestbook" data-reveal hidden>
+        <div class="gb-intro">
+          <p class="gb-kicker"><span data-i18n="gb.kicker">GUESTBOOK</span><span class="gb-num" id="gbCount"></span></p>
+          <h3 class="gb-title" data-i18n="gb.title">留下一句话</h3>
+          <p class="gb-note" data-i18n="gb.note">留言实时写入云端，公开可见。看了片子想聊两句，都可以写在这里。</p>
+
+          <form class="gb-form" id="gbForm" novalidate>
+            <div class="gb-row">
+              <label class="gb-field">
+                <span class="gb-label" data-i18n="gb.lbName">称呼</span>
+                <input class="gb-input" id="gbName" type="text" maxlength="40" autocomplete="name" data-i18n-ph="gb.phName" placeholder="可选">
+              </label>
+              <label class="gb-field">
+                <span class="gb-label" data-i18n="gb.lbIdentity">身份</span>
+                <input class="gb-input" id="gbIdentity" type="text" maxlength="40" data-i18n-ph="gb.phIdentity" placeholder="可选，如 HR / 导演">
+              </label>
+            </div>
+            <label class="gb-field gb-field-area">
+              <span class="gb-label"><span data-i18n="gb.lbContent">留言</span><span class="gb-counter" id="gbCounter">0 / 300</span></span>
+              <textarea class="gb-textarea" id="gbContent" rows="3" maxlength="300" required data-i18n-ph="gb.phContent" placeholder="写点什么…"></textarea>
+            </label>
+            <div class="gb-actions">
+              <span class="gb-hint" id="gbHint" role="status" aria-live="polite"></span>
+              <button class="btn btn-fill gb-send" type="submit" id="gbSubmit"><span data-i18n="gb.send">发送留言</span> <i>→</i></button>
+            </div>
+          </form>
+        </div>
+
+        <div class="gb-side">
+          <ul class="gb-list" id="gbList"></ul>
+          <p class="gb-empty" data-i18n="gb.empty">还没有留言，来做第一个。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee marquee--contact" data-marquee aria-hidden="true">
+      <div class="marquee-track">
+        <span>OPEN FOR COLLABORATION</span><i>✦</i><span data-i18n="marquee.m1">商业广告</span><i>✦</i><span data-i18n="marquee.m2">海外短剧</span><i>✦</i><span data-i18n="marquee.m4">AIGC 创作</span><i>✦</i>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="footer-giant" data-reveal aria-hidden="true">
+  <span class="fg-cn">吴旭涵</span>
+  <span class="fg-en">WU&nbsp;XUHAN</span>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p data-i18n="footer.copy">© 2026 吴旭涵 · 影视后期 / 短视频运营</p>
+    <p class="footer-note" data-i18n="footer.note">个人影像档案 · BLACK BOX ARCHIVE</p>
+    <button class="footer-replay" id="footerReplay" type="button" data-replay-intro>重播开场 <i>&#8599;</i></button>
+    <button class="back-top" id="backTop" type="button" data-magnetic data-cursor="TOP"><span data-i18n="footer.top">↑ TOP</span></button>
+  </div>
+</footer>
+
+<!-- 页面进度 -->
+<aside class="page-dock" id="pageDock" aria-label="页面进度" data-i18n-aria="page.dock">
+  <div class="dock-main"><span class="dock-current" id="dockCurrent">01</span><span class="dock-total">/ 06</span></div>
+  <div class="dock-track"><i id="dockBar"></i></div>
+  <div class="dock-label" id="dockLabel">序</div>
+  <div class="dock-btns">
+    <button id="dockPrev" type="button" aria-label="上一页" data-i18n-aria="page.prev">↑</button>
+    <button id="dockNext" type="button" aria-label="下一页" data-i18n-aria="page.next">↓</button>
+  </div>
+</aside>
+
+<!-- 交互指南 -->
+<div class="guide" id="guide">
+  <button class="guide-toggle" id="guideToggle" type="button" aria-expanded="false" aria-controls="guidePanel">
+    <i aria-hidden="true">✦</i><span data-i18n="nav.guide">交互指南</span>
+  </button>
+  <div class="guide-panel" id="guidePanel" hidden>
+    <p class="guide-title" data-i18n="guide.title">HOW TO EXPLORE / 如何浏览</p>
+    <ul>
+      <li><b data-i18n="guide.k1">滚动</b><span data-i18n="guide.d1">逐帧经过每个章节</span></li>
+      <li><b data-i18n="guide.k2">悬停</b><span data-i18n="guide.d2">作品卡片静音预览</span></li>
+      <li><b data-i18n="guide.k3">点击</b><span data-i18n="guide.d3">进入展映 · ← → 切换</span></li>
+      <li><b data-i18n="guide.k4">点击邮箱</b><span data-i18n="guide.d4">一键复制联系方式</span></li>
+      <li><b data-i18n="guide.k5">ESC</b><span data-i18n="guide.d5">关闭展映 / 指南</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- 展映弹窗 -->
+<div class="work-modal" id="workModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-shell">
+    <div class="modal-head">
+      <p class="modal-index"><span id="modalNo">01</span><i>/ <span id="modalTotal">16</span></i></p>
+      <p class="modal-cat" id="modalCat">商业广告</p>
+      <button class="modal-close" id="modalClose" type="button" aria-label="关闭展映" data-i18n-aria="aria.close" data-cursor="关闭"><span></span><span></span></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-stage" id="modalStage" data-cat="ad">
+        <div class="stage-art" id="stageArt">
+          <img class="stage-still" id="stageStill" alt="" hidden>
+          <span class="stage-no" id="stageNo">01</span>
+          <span class="stage-cat" id="stageCat">商业广告</span>
+          <span class="stage-title" id="stageTitle">坦克300</span>
+          <span class="stage-mark">ARCHIVE STILL</span>
+        </div>
+        <video class="stage-video" id="stageVideo" playsinline preload="metadata" muted></video>
+        <button class="stage-play" id="stagePlay" type="button" aria-label="播放" data-i18n-aria="aria.play"><span></span></button>
+        <div class="stage-controls" id="stageControls">
+          <button class="ctrl-btn ctrl-play" id="ctrlPlay" type="button" aria-label="播放 / 暂停" data-i18n-aria="aria.play">▶</button>
+          <span class="ctrl-time"><i id="ctrlCurrent">0:00</i><em>/</em><i id="ctrlDuration">0:00</i></span>
+          <div class="ctrl-progress" id="ctrlProgress" role="slider" tabindex="0" aria-label="播放进度" data-i18n-aria="aria.progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="ctrlBar"></i><b id="ctrlKnob"></b></div>
+          <div class="ctrl-bgm">
+            <span class="ctrl-bgm-label">BGM</span>
+            <button class="ctrl-btn ctrl-mute is-muted" id="ctrlMute" type="button" aria-label="静音" data-i18n-aria="aria.mute" aria-pressed="true">VOL</button>
+            <input class="ctrl-range" id="ctrlVolume" type="range" min="0" max="100" step="1" value="65" aria-label="BGM 音量" data-i18n-aria="aria.volume">
+            <span class="ctrl-vol-val" id="ctrlVolVal" aria-hidden="true">65</span>
+          </div>
+          <div class="view-modes" role="group" aria-label="画面大小" data-i18n-aria="aria.zoom">
+            <button class="ctrl-btn mode-btn is-active" type="button" data-zoom="original" aria-pressed="true" aria-label="原始大小" data-i18n-aria="aria.zoomOriginal">▣</button>
+            <button class="ctrl-btn mode-btn" type="button" data-zoom="half" aria-pressed="false" aria-label="半全屏" data-i18n-aria="aria.zoomHalf">◪</button>
+            <button class="ctrl-btn mode-btn" type="button" data-zoom="full" aria-pressed="false" aria-label="全屏" data-i18n-aria="aria.zoomFull">⛶</button>
+          </div>
+        </div>
+        <p class="stage-note" id="stageNote" data-i18n="modal.stageNote">影像母带 · 可邮件索取</p>
+      </div>
+
+      <div class="modal-info">
+        <h3 class="modal-title" id="modalTitle">作品标题</h3>
+        <p class="modal-sub" id="modalSub">分类 · 职责</p>
+        <p class="modal-desc" id="modalDesc">作品描述</p>
+        <dl class="modal-meta">
+          <div><dt data-i18n="modal.category">类别</dt><dd id="metaCat">商业广告</dd></div>
+          <div><dt data-i18n="modal.format">形式</dt><dd data-i18n="modal.formatValue">影像 / 短片</dd></div>
+          <div><dt data-i18n="modal.duration">时长</dt><dd id="metaDur">—</dd></div>
+          <div><dt data-i18n="modal.number">编号</dt><dd id="metaNo">NO.01</dd></div>
+        </dl>
+        <div class="modal-nav">
+          <button class="modal-arrow" id="prevWork" type="button" data-cursor="上一件"><span data-i18n="modal.prev">← 上一件</span></button>
+          <button class="modal-arrow" id="nextWork" type="button" data-cursor="下一件"><span data-i18n="modal.next">下一件 →</span></button>
+        </div>
+        <p class="modal-hint" data-i18n="modal.hint">← → 切换作品 · ESC 关闭</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 简历在线预览 -->
+<div class="resume-modal" id="resumeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+  <div class="resume-backdrop" data-resume-close></div>
+  <div class="resume-shell">
+    <header class="resume-head">
+      <div class="resume-heading">
+        <p class="resume-kicker" data-i18n="contact.resumeKicker">RESUME / CV</p>
+        <h3 class="resume-title" id="resumeTitle">中文简历</h3>
+        <p class="resume-pages"><span id="resumePageNow">1</span> / <span id="resumePageTotal">1</span><em data-i18n="contact.resumePages">页</em></p>
+      </div>
+      <div class="resume-actions">
+        <a class="btn btn-line btn-sm" id="resumeDownload" href="assets/resume/%E5%90%B4%E6%97%AD%E6%B6%B5_%E7%AE%80%E5%8E%86.pdf" download="吴旭涵_简历.pdf"><span data-i18n="contact.resumeDownload">下载原文件</span> <i>↓</i></a>
+        <button class="resume-close" id="resumeClose" type="button" aria-label="关闭预览" data-i18n-aria="contact.resumeClose"><span></span><span></span></button>
+      </div>
+    </header>
+    <div class="resume-scroll" id="resumeScroll">
+      <div class="resume-pages-wrap" id="resumePagesWrap"></div>
+    </div>
+    <p class="resume-hint"><span data-i18n="contact.resumeHint">预览由 PDF 原文件渲染，内容与下载文件一致。</span><em aria-hidden="true">·</em><span data-i18n="contact.resumeZoom">点击页面可放大，再次点击还原</span></p>
+  </div>
+</div>
+
+<script src="js/vendor/workbuddy-cloud-sdk.js"></script>
+<script src="js/works-data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/art-core.js"></script>
+<script src="js/art-motion.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/contact-cloud.js"></script>
+<script src="js/art-extras.js"></script>
+<script src="js/art-depth.js"></script>
+<script src="js/art-resume.js"></script>
+<script src="js/collection.js"></script>
+<script src="js/identity-rail.js"></script>
+<script src="js/ref-2026.js"></script>
+<script src="js/intro-3d.js"></script>
+<script src="js/cursor-glow.js"></script>
+</body>
+</html>

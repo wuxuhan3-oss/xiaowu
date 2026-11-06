@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>留言管理 · 吴旭涵</title>
+<style>
+  :root{
+    --paper:#f2ece0; --paper-2:#e9e1d2; --paper-3:#ddd3c1;
+    --red:#b83c26; --red-2:#d24a2f; --ink:#0b0b0c;
+    --line:rgba(11,11,12,.16); --line-2:rgba(11,11,12,.32);
+    --txt:#0b0b0c; --mut:rgba(11,11,12,.58);
+    --font-display:"方正粗黑宋简体","思源宋体 CN Heavy","Songti SC","宋体",serif;
+    --font-body:"Microsoft YaHei","微软雅黑","Noto Sans SC",-apple-system,"Segoe UI",sans-serif;
+    --font-meta:"DIN Next LT Pro","Bahnschrift","Segoe UI",Arial,sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper);color:var(--txt);font-family:var(--font-body)}
+  body{-webkit-font-smoothing:antialiased;min-height:100vh}
+  a{color:inherit}
+
+  .bar{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:16px clamp(18px,4vw,48px);border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:var(--paper);z-index:5;
+  }
+  .bar-l{display:flex;align-items:baseline;gap:12px;min-width:0}
+  .bar-kicker{font-family:var(--font-meta);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+  .bar-title{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:.02em}
+  .bar-r{display:flex;align-items:center;gap:18px}
+  .bar-link{font-size:12.5px;color:var(--mut);text-decoration:none;border-bottom:1px solid transparent;transition:.25s var(--ease)}
+  .bar-link:hover{color:var(--red);border-color:var(--red)}
+
+  .wrap{max-width:1000px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(18px,4vw,32px) 80px}
+  .card{background:rgba(255,255,255,.35);border:1px solid var(--line);padding:clamp(24px,3.4vw,40px)}
+  .card + .card{margin-top:18px}
+
+  h1.lead{font-family:var(--font-display);font-size:clamp(26px,4vw,38px);line-height:1.2;margin:0 0 10px;letter-spacing:.01em}
+  .sub{font-size:13.5px;line-height:1.9;color:var(--mut);margin:0 0 26px;max-width:46ch}
+  .sub b{color:var(--red);font-weight:600}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);
+    background:var(--ink);color:var(--paper);padding:12px 22px;font:inherit;font-size:13px;
+    letter-spacing:.04em;cursor:pointer;transition:.25s var(--ease);
+  }
+  .btn:hover{background:var(--red);border-color:var(--red)}
+  .btn[disabled]{opacity:.5;cursor:progress;pointer-events:none}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:transparent;color:var(--red);border-color:var(--red)}
+  .btn-sm{padding:7px 14px;font-size:12px}
+
+  .field{margin:18px 0 0}
+  .label{display:block;font-family:var(--font-meta);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+  .input{
+    width:100%;background:transparent;border:1px solid var(--line-2);padding:12px 14px;
+    font:inherit;font-size:14px;color:var(--txt);outline:none;letter-spacing:.06em;transition:border-color .25s var(--ease);
+  }
+  .input:focus{border-color:var(--red)}
+
+  .msg{margin:16px 0 0;font-size:12.5px;line-height:1.7;min-height:1.4em;color:var(--mut)}
+  .msg[data-tone="err"]{color:var(--red)}
+  .msg[data-tone="ok"]{color:#2f7a4d}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:0 0 26px}
+  .stat{background:var(--paper);padding:18px 20px}
+  .stat dt{font-family:var(--font-meta);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin:0 0 8px}
+  .stat dd{margin:0;font-family:var(--font-display);font-size:26px;font-weight:700;letter-spacing:.01em}
+  .stat dd small{font-size:12px;font-weight:400;color:var(--mut);margin-left:4px;font-family:var(--font-body)}
+
+  .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .item{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start}
+  .item-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .who{font-weight:600;font-size:13.5px}
+  .who-none{color:var(--mut);font-weight:400}
+  .tag{font-family:var(--font-meta);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:2px 6px}
+  .when{font-family:var(--font-meta);font-size:11px;letter-spacing:.08em;color:var(--mut)}
+  .text{font-size:13.5px;line-height:1.85;word-break:break-word;white-space:pre-wrap;margin:0}
+  .del{
+    background:transparent;border:1px solid var(--line);color:var(--mut);font:inherit;font-size:11.5px;
+    padding:6px 12px;cursor:pointer;transition:.25s var(--ease);white-space:nowrap;
+  }
+  .del:hover{border-color:var(--red);color:var(--red)}
+  .del[disabled]{opacity:.45;cursor:progress;pointer-events:none}
+  .empty{font-size:13px;color:var(--mut);padding:26px 0;text-align:center}
+
+  .hidden{display:none !important}
+  .foot{margin-top:34px;font-family:var(--font-meta);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  @media(max-width:640px){
+    .stats{grid-template-columns:1fr}
+    .item{grid-template-columns:1fr}
+    .bar-title{font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-l">
+    <span class="bar-kicker">Admin</span>
+    <span class="bar-title">留言管理</span>
+  </div>
+  <div class="bar-r">
+    <a class="bar-link" id="backLink" href="index.html">返回站点</a>
+    <button class="bar-link btn-logout hidden" id="logoutBtn" type="button" style="background:none;border:0;padding:0;cursor:pointer;font:inherit">退出登录</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- 加载 -->
+  <div class="card" id="viewLoading">
+    <p class="sub" style="margin:0">正在确认登录状态…</p>
+  </div>
+
+  <!-- 未登录 -->
+  <div class="card hidden" id="viewLogin">
+    <h1 class="lead">管理端登录</h1>
+    <p class="sub">此页仅用于管理站点访客留言。使用 <b>WorkBuddy 账号</b>登录后，只有绑定为管理员的那一个账号可以删除留言。</p>
+    <button class="btn" id="loginBtn" type="button">使用 WorkBuddy 登录</button>
+    <p class="msg" id="loginMsg" role="status" aria-live="polite"></p>
+  </div>
+
+  <!-- 已登录但未绑定管理员 -->
+  <div class="card hidden" id="viewClaim">
+    <h1 class="lead">绑定管理员</h1>
+    <p class="sub">当前账号已登录，但还不是管理员。输入站长手中的<b>一次性绑定口令</b>完成绑定；绑定成功后此口令即失效，只有当前账号可管理留言。</p>
+    <div class="field">
+      <label class="label" for="tokenInput">绑定口令</label>
+      <input class="input" id="tokenInput" type="text" autocomplete="off" spellcheck="false" placeholder="WXH-XXXX-XXXX-XXXX">
+    </div>
+    <div class="field">
+      <button class="btn" id="claimBtn" type="button">完成绑定</button>
+    </div>
+    <p class="msg" id="claimMsg" role="status" aria-live="polite"></p>
+  </div>
+
+  <!-- 管理员面板 -->
+  <div class="card hidden" id="viewPanel">
+    <h1 class="lead">留言管理</h1>
+    <p class="sub" style="margin-bottom:22px">删除后不可恢复。留言本身是公开可见的，删除只影响站点上的展示。</p>
+    <dl class="stats">
+      <div class="stat"><dt>留言</dt><dd><span id="statMsgs">—</span><small>条</small></dd></div>
+      <div class="stat"><dt>简历下载</dt><dd><span id="statDl">—</span><small>次</small></dd></div>
+      <div class="stat"><dt>管理员</dt><dd style="font-size:14px;font-family:var(--font-body);font-weight:400"><span id="statWho">—</span></dd></div>
+    </dl>
+    <p class="msg" id="panelMsg" role="status" aria-live="polite"></p>
+    <ul class="list" id="msgList"></ul>
+    <p class="empty hidden" id="msgEmpty">还没有访客留言。</p>
+  </div>
+
+  <p class="foot">Wu Xuhan · Admin Console</p>
+</div>
+
+<script src="js/vendor/workbuddy-cloud-sdk.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

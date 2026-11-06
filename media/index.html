@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>媒体库 · 影像档案</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--ink:#0b0b0c;--paper:#f2ece0;--red:#b83c26;--line:rgba(242,236,224,.16);--mut:rgba(242,236,224,.62);--mono:"Courier New",monospace;--serif:"Songti SC","Noto Serif SC",serif}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+header{padding:34px clamp(16px,5vw,64px) 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap}
+.kicker{font-family:var(--mono);font-size:10px;letter-spacing:.28em;color:var(--red);margin:0}
+h1{font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:400;margin:10px 0 0}
+header .stat{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--mut);margin:0;line-height:1.9;text-align:right}
+header a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:4px;font-family:var(--mono);font-size:10px;letter-spacing:.16em}
+main{padding:clamp(18px,4vw,44px) clamp(16px,5vw,64px) 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(18px,2.6vw,32px)}
+.card{border:1px solid var(--line);background:#111;min-width:0}
+.card video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:contain}
+.meta{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:14px 16px;border-top:1px solid var(--line)}
+.meta h2{font-family:var(--serif);font-weight:400;font-size:18px;margin:0;line-height:1.3}
+.meta p{font-family:var(--mono);font-size:9px;color:var(--mut);margin:6px 0 0;letter-spacing:.08em}
+.meta a{flex:none;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--paper);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px;white-space:nowrap}
+.meta a:hover{color:var(--red);border-color:var(--red)}
+footer{padding:22px clamp(16px,5vw,64px) 40px;border-top:1px solid var(--line);font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--mut);line-height:1.9}
+.loading{padding:40px clamp(16px,5vw,64px);font-family:var(--mono);font-size:10px;color:var(--mut);letter-spacing:.12em}
+@media(max-width:620px){main{grid-template-columns:1fr}.meta h2{font-size:16px}header .stat{text-align:left}}
+</style>
+</head>
+<body>
+<header>
+  <div><p class="kicker">MEDIA LIBRARY / 影像档案</p><h1>作品媒体库</h1></div>
+  <div><p class="stat" id="stats">LOADING MEDIA…</p><a href="../">返回主站 ↗</a></div>
+</header>
+<main id="grid"><p class="loading">正在读取媒体清单…</p></main>
+<footer>稳定路径：/media/&lt;slug&gt;.mp4 · 清单：/media/manifest.json · 文件为 H.264 / 720p / AAC</footer>
+<script>
+(function(){
+  var grid=document.getElementById('grid'), stats=document.getElementById('stats');
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  fetch('./manifest.json').then(function(r){return r.json();}).then(function(m){
+    stats.innerHTML=esc(m.count)+' 支 · '+esc(m.totalMB)+' MB<br>H.264 / 720p / AAC';
+    grid.innerHTML='';
+    m.entries.forEach(function(e){
+      var card=document.createElement('article'); card.className='card';
+      var video=document.createElement('video');
+      video.src='./'+e.file; video.controls=true; video.preload='metadata'; video.setAttribute('playsinline','');
+      var meta=document.createElement('div'); meta.className='meta';
+      var box=document.createElement('div');
+      var h=document.createElement('h2'); h.textContent=e.title;
+      var p=document.createElement('p'); p.textContent=e.mb+' MB · '+Math.round(e.duration)+'s';
+      box.appendChild(h); box.appendChild(p);
+      var a=document.createElement('a'); a.href='./'+e.file; a.setAttribute('download',''); a.innerHTML='下载 MP4 <span>↓</span>';
+      meta.appendChild(box); meta.appendChild(a);
+      card.appendChild(video); card.appendChild(meta); grid.appendChild(card);
+    });
+  }).catch(function(){
+    grid.innerHTML='<p class="loading">清单加载失败，请直接访问 /media/&lt;slug&gt;.mp4</p>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+# ============================================================
+# BLACK BOX ARCHIVE · Caddy 配置（零运维替代方案）
+# 适用：不想手动管证书续期时，用 Caddy 2 一键完成签发 + 续期 + 跳转
+# 部署路径：/etc/caddy/Caddyfile
+# 渲染占位符：deploy/scripts/set-domain.sh
+# ============================================================
+
+{
+	# 证书到期提醒与 ACME 账户邮箱，务必改成你自己的邮箱
+	email admin@__DOMAIN__
+	# 如需国内加速，可在此配置 DNS 提供商插件走 DNS-01（见 README「通配符证书」）
+}
+
+# 主域名：Caddy 会自动申请证书、自动 80→443 跳转、自动续期
+__DOMAIN__ {
+	encode zstd gzip
+
+	root * /var/www/portfolio
+	file_server {
+		hide .git
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "geolocation=(), microphone=(), camera=()"
+		-Server
+	}
+
+	# 静态资源长缓存；HTML 不缓存
+	@assets path /css/* /js/* /assets/*
+	header @assets Cache-Control "public, max-age=2592000"
+
+	@html path / /index.html
+	header @html Cache-Control "no-cache"
+
+	# 简历文件每小时刷新
+	@pdf path /assets/resume/*.pdf
+	header @pdf Cache-Control "public, max-age=3600"
+}
+
+# www 归一化到主域名（Caddy 会为它单独签发一张含两个 SAN 的证书）
+www.__DOMAIN__ {
+	redir https://__DOMAIN__{uri} permanent
+}
