@@ -71,8 +71,8 @@
         eduLi1: '主修：影视剪辑 / 三维动画建模 / 影视美术 / 动画软件制作 / 影视动画语言',
         eduLi2: '综合排名校前 10%，一等奖学金 ×2、二等奖学金 ×1、三等奖学金 ×2',
         awardsLabel: 'AWARDS / 获奖',
-        award1: '吉林省第七届冰雪节创意大赛 · 三等奖（省级）',
-        award2: '天池奖·第七届吉林省大学生广告创意大赛 · 优秀奖（省级）',
+        award1: '天池奖·第七届吉林省大学生广告创意大赛 · 优秀奖（省级）',
+        award2: '吉林省第七届冰雪节创意大赛 · 三等奖（省级）',
         award3: '吉林省第三、二届大学生主题创作短视频大赛 · 优秀奖（省级）',
         award4: '第六届全国大学生组织管理能力大赛 · 一等奖（国家级）',
         award5: '全国大学生视觉艺术设计竞赛（UVADC）省级赛 · 三等奖'
@@ -90,12 +90,12 @@
         b22: '搭建标准化选题库与更新 SOP，沉淀可复用的封面与标题模板，维持账号稳定增长',
         b23: '负责电商产品图后期，用 Photoshop 完成调色、瑕疵修复与精修，统一店铺视觉风格',
         y3: '2024.11 — 2025.03', o3: '福州畅读科技有限公司', r3: 'AI 漫剧后期制作实习生',
-        b31: '独立完成 15 部都市复仇竖屏短剧后期剪辑，累计交付 1630 集，覆盖欧美（原生英文）与印尼（国产翻拍）双市场',
-        b32: '作品上线 MoboReels 等畅读海外短剧 App，单部最高登顶站内日榜第 1 名，最高播放量 600 万',
-        b33: '基于海外榜单与完播数据重构剪辑节奏，AI 批量生成字幕与转场，单集效率提升 36%，完播率提升 3 个百分点',
+        b31: '参与 15 部都市复仇竖屏短剧的后期剪辑，团队累计交付 1630 集，覆盖欧美（原生英文）与印尼（国产翻拍）双市场',
+        b32: '作品上线 MoboReels 等畅读海外短剧 App（Google Play / App Store 多国畅销榜第一），单部最高登顶站内日榜第 1 名，单集最高播放 600 万',
+        b33: '个人月均产出 130 集；基于海外榜单与完播数据重构剪辑节奏，AI 批量生成字幕与转场，单集效率提升 36%，完播率提升 3 个百分点',
         y4: '2023.12 — 2024.03', o4: '莆田聚云合科技有限公司', r4: '视频剪辑实习生',
         b41: '负责直播切片与千川投流素材剪辑，日均产出 10–15 条，稳定支撑直播间日播投流',
-        b42: '编写千川投放脚本，7 条成功跑量；优化前 3 秒结构与卖点呈现，素材完播率提升 35%，获客成本降低 18%'
+        b42: '编写 5 条千川投放脚本，衍生素材中 7 条成功跑量；优化前 3 秒结构与卖点呈现，账户完播率提升 35%，获客成本降低 18%'
       },
       contact: {
         kicker: '05 — CONTACT', title1: '一起做点', title2: '有质感的东西',
@@ -205,8 +205,8 @@
         eduLi1: 'Majors: Film editing / 3D animation modeling / Film art / Animation software / Film animation language',
         eduLi2: 'Top 10% of the school; first-class scholarship ×2, second-class ×1, third-class ×2',
         awardsLabel: 'AWARDS',
-        award1: '7th Jilin Ice & Snow Festival Creative Contest · Third Prize (Provincial)',
-        award2: 'Tianchi Award · 7th Jilin Advertising Creative Contest · Excellence Award (Provincial)',
+        award1: 'Tianchi Award · 7th Jilin Advertising Creative Contest · Excellence Award (Provincial)',
+        award2: '7th Jilin Ice & Snow Festival Creative Contest · Third Prize (Provincial)',
         award3: '3rd & 2nd Jilin Provincial College Student Theme Creation Short Video Contest · Excellence Award (Provincial)',
         award4: '6th National College Student Organizational Management Competition · First Prize (National)',
         award5: 'National University Visual Art Design Competition (UVADC), provincial round · Third Prize'
@@ -224,12 +224,12 @@
         b22: 'Built a standard topic library and posting SOP; reusable cover and headline templates for steady growth',
         b23: 'Product-photo retouching in Photoshop — colour grading, blemish removal, consistent store visual style',
         y3: '2024.11 — 2025.03', o3: 'Fuzhou Changdu Technology Co., Ltd.', r3: 'AI Drama Post-production Intern',
-        b31: 'Edited 15 urban-revenge vertical short dramas, 1,630 episodes delivered across Western (native English) and Indonesian (localized remake) markets',
-        b32: 'Titles live on MoboReels and other Changdu overseas short-drama apps; best title hit No.1 on the in-app daily chart with 6M views',
-        b33: 'Rebuilt pacing from overseas charts and completion data; AI-assisted subtitles and transitions — per-episode efficiency +36%, completion +3 pts',
+        b31: 'Post-production on 15 urban-revenge vertical short dramas; the team delivered 1,630 episodes for Western and Indonesian markets',
+        b32: 'Released on MoboReels and other Changdu overseas apps (No.1 on Google Play / App Store bestseller lists in several countries); best title No.1 on platform chart, top episode 6M views',
+        b33: 'Averaged 130 episodes per month; rebuilt pacing from chart and completion data, with AI-assisted subtitling — per-episode efficiency +36%, completion +3 pts',
         y4: '2023.12 — 2024.03', o4: 'Putian Juyunhe Technology Co., Ltd.', r4: 'Video Editing Intern',
         b41: 'Edited live-stream clips and Qianchuan ad creatives, 10–15 pieces daily, supporting daily live ad delivery',
-        b42: 'Wrote Qianchuan ad scripts, 7 scaled into paid delivery; reworked the first 3 seconds — creative completion +35%, acquisition cost -18%'
+        b42: 'Wrote 5 Qianchuan scripts, 7 derived creatives scaled; hook and selling-point rework lifted account completion 35%, acquisition cost -18%'
       },
       contact: {
         kicker: '05 — CONTACT', title1: 'Let us make', title2: 'something tactile',
@@ -339,8 +339,8 @@
         eduLi1: '전공: 영상 편집 / 3D 애니메이션 모델링 / 영상 미술 / 애니메이션 소프트웨어 / 영상 애니메이션 언어',
         eduLi2: '학내 상위 10%, 1등 장학금 ×2 · 2등 ×1 · 3등 ×2',
         awardsLabel: 'AWARDS / 수상',
-        award1: '지린성 제7회 빙설축제 크리에이티브 공모전 · 3등상(성급)',
-        award2: '톈츠상 제7회 지린성 대학생 광고 크리에이티브 공모전 · 우수상(성급)',
+        award1: '톈츠상 제7회 지린성 대학생 광고 크리에이티브 공모전 · 우수상(성급)',
+        award2: '지린성 제7회 빙설축제 크리에이티브 공모전 · 3등상(성급)',
         award3: '지린성 제3·2회 대학생 주제 창작 숏비디오 공모전 · 우수상(성급)',
         award4: '제6회 전국 대학생 조직관리 역량 대회 · 1등상(국가급)',
         award5: '전국 대학생 시각예술디자인 공모전(UVADC) 성급 대회 · 3등상'
@@ -358,12 +358,12 @@
         b22: '표준 주제 라이브러리와 업로드 SOP 구축, 재사용 가능한 커버·제목 템플릿으로 안정적 성장 유지',
         b23: '제품 이미지 후반 작업(Photoshop 색보정·결점 보정·정교화)으로 스토어 비주얼 통일',
         y3: '2024.11 — 2025.03', o3: '푸저우 창두 테크놀로지 유한회사', r3: 'AI 드라마 후반 제작 인턴',
-        b31: '도시 복수 장르 세로형 숏드라마 15편 후반 편집 단독 담당, 총 1,630화 납품(서구·인도네시아 시장)',
-        b32: 'MoboReels 등 창두 해외 숏드라마 앱에 공개, 최고 작품은 앱 내 일간 차트 1위·재생수 600만',
-        b33: '해외 차트·완주 데이터로 편집 리듬 재구성, AI 자막·전환으로 편당 효율 36% 향상, 완주율 3%p 상승',
+        b31: '도시 복수 장르 세로형 숏드라마 15편 후반 편집 참여, 팀 합계 1,630화 납품(서구·인도네시아 시장)',
+        b32: 'MoboReels 등 창두 해외 숏드라마 앱에 공개, 최고 작품 앱 내 일간 차트 1위·단일 에피소드 최고 600만 재생',
+        b33: '월평균 130화 제작, 해외 차트·완주 데이터로 편집 리듬 재구성, AI 자막으로 편당 효율 36% 향상·완주율 3%p 상승',
         y4: '2023.12 — 2024.03', o4: '푸톈 쥐윈허 테크놀로지', r4: '영상 편집 인턴',
         b41: '라이브 클립과 치엔촨 광고 소재 편집, 일평균 10~15편으로 라이브 일일 송출 지원',
-        b42: '치엔촨 집행 스크립트 작성, 7편 확산 성공; 초반 3초 구조 개선으로 소재 완주율 35% 향상, 획득 비용 18% 절감'
+        b42: '치엔촨 집행 스크립트 5편 작성, 파생 소재 7편 확산; 초반 3초 구조 개선으로 계정 완주율 35% 향상, 획득 비용 18% 절감'
       },
       contact: {
         kicker: '05 — CONTACT', title1: '함께', title2: '질감 있는 것을',
@@ -473,8 +473,8 @@
         eduLi1: '専攻：映像編集／3Dアニメーションモデリング／映像美術／アニメーションソフト制作／映像アニメーション言語',
         eduLi2: '学内上位10%。一等奨学金×2、二等×1、三等×2',
         awardsLabel: 'AWARDS / 受賞',
-        award1: '吉林省第7回氷雪祭クリエイティブコンテスト · 三等賞（省級）',
-        award2: '天池賞 第7回吉林省大学生広告クリエイティブコンテスト · 優秀賞（省級）',
+        award1: '天池賞 第7回吉林省大学生広告クリエイティブコンテスト · 優秀賞（省級）',
+        award2: '吉林省第7回氷雪祭クリエイティブコンテスト · 三等賞（省級）',
         award3: '吉林省第3・2回大学生テーマ創作ショート動画コンテスト · 優秀賞（省級）',
         award4: '第6回全国大学生組織管理能力コンテスト · 一等賞（国家級）',
         award5: '全国大学生ビジュアルアートデザイン競技会（UVADC）省級大会 · 三等賞'
@@ -492,12 +492,12 @@
         b22: '標準的な企画ライブラリと更新SOPを構築し、再利用可能なカバー・タイトルテンプレートで安定成長を維持',
         b23: '商品画像のレタッチ（Photoshopでの色調整・傷修正・精緻化）でストアのビジュアルを統一',
         y3: '2024.11 — 2025.03', o3: '福州暢読科技有限公司', r3: 'AIドラマ・ポストプロダクションインターン',
-        b31: '都市リベンジ系縦型ショートドラマ15本のポストを単独担当、累計1,630話を納品（欧米・インドネシア市場）',
-        b32: 'MoboReels など暢読の海外ショートドラマアプリで公開。最高作品はアプリ内日間ランキング1位・再生600万回',
-        b33: '海外ランキングと完走データから編集リズムを再構築。AIによる字幕・トランジションで1話あたり効率36%向上、完走率3ポイント上昇',
+        b31: '都市リベンジ系縦型ショートドラマ15本のポストを担当、チーム累計1,630話を納品（欧米・インドネシア市場）',
+        b32: 'MoboReels など暢読の海外ショートドラマアプリで公開。最高作品はアプリ内日間ランキング1位、単話最高再生600万回',
+        b33: '月平均130話を制作。海外ランキングと完走データから編集リズムを再構築し、AI字幕で1話あたり効率36%向上・完走率3%上昇',
         y4: '2023.12 — 2024.03', o4: '莆田聚雲合科技有限公司', r4: '映像編集インターン',
         b41: 'ライブ配信クリップと千川広告素材を編集、日次10〜15本でライブ配信の日次配信を支える',
-        b42: '千川配信台本を作成し7本が拡散。冒頭3秒の構成改善で素材完走率35%向上、獲得コスト18%削減'
+        b42: '千川配信台本5本を作成し派生素材7本が拡散。冒頭3秒の構成改善でアカウント完走率35%向上、獲得コスト18%削減'
       },
       contact: {
         kicker: '05 — CONTACT', title1: '一緒に', title2: '質感のあるもの',
